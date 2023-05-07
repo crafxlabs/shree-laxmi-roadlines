@@ -1,8 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
+
+/* ============================================ PRELOADER ================================================= */
 
 .preloader {
   position: fixed;
@@ -18,9 +22,134 @@
   width: 250px;
 }
 
-@media screen and (max-width: 768px) {
+/* ============================================ HEADER ================================================= */
+
+header {
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  padding: 15px 35px;
+  height: 15vh;
+}
+
+header .logo {
+  width: 220px;
+}
+
+header .logo img {
+  width: 100%;
+}
+
+header nav ul {
+  display: flex;
+  gap: 25px;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #1f1f1f;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+header nav ul li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #f28025;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease-in-out;
+}
+
+header nav ul li a:hover::after {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+  color: #f28025;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu,
+.cross {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ============================================ PRELOADER ================================================= */
+
+/* ============================================ PRELOADER ================================================= */
+
+/* ============================================ PRELOADER ================================================= */
+
+/* ============================================ PRELOADER ================================================= */
+
+@media screen and (max-width: 990px) {
   .preloader img {
     width: 200px;
     margin-bottom: 100px;
+  }
+
+  header nav ul {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    height: 100vh;
+    width: 60%;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 100px 0 0 25px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    transform: translateX(500px);
+    transition: all 0.3s ease;
+  }
+
+  .open {
+    transform: translateX(0px);
+    transition: all 0.3s ease;
+  }
+
+  .close {
+    transform: translateX(500px);
+    transition: all 0.3s ease;
+  }
+
+  header {
+    padding: 10px 15px;
+    height: 12vh;
+  }
+
+  header .logo {
+    width: 150px;
+  }
+
+  .menu,
+  .cross {
+    display: block;
+  }
+
+  .cross {
+    position: absolute;
+    top: 16px;
+    right: 15px;
   }
 }

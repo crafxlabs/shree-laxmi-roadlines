@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Preloader from './Preloader';
+import Header from './Header';
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
 
   setTimeout(() => {
     setLoading(false)
-  }, 7000)
+  }, 1000)
 
   if (loading) {
     return <Preloader />
@@ -19,7 +20,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>App</h1>
+      <Header />
     </div>
   );
 }
