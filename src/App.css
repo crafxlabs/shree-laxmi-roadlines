@@ -26,7 +26,7 @@
 
 header {
   background-color: #ffffff;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   display: flex;
@@ -35,11 +35,11 @@ header {
   width: 100%;
   overflow: hidden;
   padding: 15px 35px;
-  height: 15vh;
+  height: 12vh;
 }
 
 header .logo {
-  width: 220px;
+  width: 180px;
 }
 
 header .logo img {
@@ -55,9 +55,10 @@ header nav ul li {
   list-style-type: none;
 }
 
-header nav ul li a {
+header nav ul li a,
+.flink ul a {
   text-decoration: none;
-  color: #1f1f1f;
+  color: #343434;
   font-weight: 500;
   font-size: 0.9rem;
   transition: all 0.3s ease-in-out;
@@ -65,7 +66,8 @@ header nav ul li a {
   padding-bottom: 3px;
 }
 
-header nav ul li a::after {
+header nav ul li a::after,
+.flink ul a::after {
   content: "";
   width: 0%;
   height: 2px;
@@ -77,12 +79,14 @@ header nav ul li a::after {
   transition: all 0.3s ease-in-out;
 }
 
-header nav ul li a:hover::after {
+header nav ul li a:hover::after,
+.flink ul a:hover::after {
   width: 100%;
   transition: all 0.3s ease-in-out;
 }
 
-header nav ul li a:hover {
+header nav ul li a:hover,
+.flink ul a:hover {
   color: #f28025;
   transition: all 0.3s ease-in-out;
 }
@@ -98,9 +102,231 @@ header nav ul li a:hover {
 
 /* ============================================ PRELOADER ================================================= */
 
-/* ============================================ PRELOADER ================================================= */
+/* ============================================ BANNER ================================================= */
 
-/* ============================================ PRELOADER ================================================= */
+.banner {
+  width: 100%;
+  height: 40vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(./images/highway.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.banner h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+.banner .path {
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.banner .path > * {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.gbanner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./images/trucks.jpg) !important;
+}
+
+/* ============================================ CONTACT ================================================= */
+
+.contact .ccon {
+  display: flex;
+  justify-content: center;
+  padding: 4% 10%;
+  gap: 50px;
+}
+
+.contact .ccon > * {
+  width: 50%;
+}
+
+.livemap iframe {
+  width: 100%;
+  height: 500px;
+}
+
+.contact .cinfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.cinfo h5 {
+  color: #f28025;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.cinfo h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #343434;
+  line-height: 40px;
+  margin: 0.35rem 0 1rem 0;
+}
+
+.cinfo .card {
+  background-color: #f4f4f4;
+  margin-bottom: 0.8rem;
+  height: 120px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  border-top: 5px solid transparent;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.cinfo .card:last-of-type {
+  margin-bottom: 0;
+}
+.cinfo .card:hover {
+  border-top: 5px solid #f28025;
+  transition: all 0.3s ease-in-out;
+}
+.cinfo .card svg {
+  font-size: 32px;
+  color: #f4f4f4;
+}
+.cinfo .card .scon {
+  background-color: #f28025;
+  padding: 0.8rem;
+  border-radius: 0.3rem;
+}
+.cinfo .card h3 {
+  color: #343434;
+  font-size: 1.2rem;
+}
+
+.cinfo .card p {
+  color: #343434;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.cform h2 {
+  color: #343434;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.cform {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4% 2%;
+  flex-direction: column;
+}
+
+.cform form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.cform form input,
+.cform form textarea {
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 0.8rem 0.8rem 0.8rem 0.5rem;
+  border-radius: 0.2rem;
+  resize: none;
+  font-size: 0.9rem;
+}
+
+.cform form div input {
+  width: 50%;
+}
+
+.cform form div {
+  display: flex;
+  gap: 20px;
+}
+
+.submitbtn {
+  background-color: #f28025;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.submitbtn:hover {
+  background-color: #343434;
+  transition: all 0.3s ease-in-out;
+}
+/* ============================================ FOOTER ================================================= */
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 2% 4%;
+  background-color: #f4f4f4;
+}
+
+footer .flogo {
+  width: 250px;
+}
+
+footer .flogo img {
+  width: 100%;
+}
+
+.flink ul {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.flink ul a {
+  width: max-content;
+}
+
+footer h2 {
+  color: #f28025;
+}
+
+.fcontact h2 {
+  margin-bottom: 1rem;
+}
+.fcontact div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.fcontact div p {
+  font-weight: 400;
+}
+
+.fcontact div svg {
+  font-size: 24px;
+}
+
+/* ============================================ MEDIA QUERY ================================================= */
 
 @media screen and (max-width: 990px) {
   .preloader img {

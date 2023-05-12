@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Logo from "./images/hlogo.png"
 import { HiOutlineMenuAlt2, HiOutlineX } from "react-icons/hi";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -25,13 +26,13 @@ const Header = () => {
             <nav>
                 <ul className={menu ? 'open' : 'close'} >
                     <div onClick={handleMenuClose} className="cross"><HiOutlineX /></div>
-                    <li><a onClick={handleMenuClose} href="#">Home</a></li>
-                    <li><a onClick={handleMenuClose} href="#">About</a></li>
-                    <li><a onClick={handleMenuClose} href="#">Services</a></li>
-                    <li><a onClick={handleMenuClose} href="#">Gallery</a></li>
-                    <li><a onClick={handleMenuClose} href="#">Fleet Description</a></li>
-                    <li><a onClick={handleMenuClose} href="#">Offices</a></li>
-                    <li><a onClick={handleMenuClose} href="#">Contact Us</a></li>
+                    <li><Link onClick={handleMenuClose} to='/'>Home</Link></li>
+                    <li><Link onClick={handleMenuClose} to='/about'>About</Link></li>
+                    <li><Link onClick={handleMenuClose} to='/services'>Services</Link></li>
+                    <li><Link onClick={handleMenuClose} to='/gallery'>Gallery</Link></li>
+                    <li><Link onClick={handleMenuClose} to='/fleet'>Fleet Description</Link></li>
+                    <li><Link onClick={handleMenuClose} to='/office'>Offices</Link></li>
+                    <li><Link onClick={handleMenuClose} to='/contact'>Contact Us</Link></li>
                 </ul>
             </nav>
 
