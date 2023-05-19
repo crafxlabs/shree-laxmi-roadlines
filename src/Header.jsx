@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Logo from "./images/hlogo.png"
+import Logo from "./images/flogo.png"
 import { HiOutlineMenuAlt2, HiOutlineX } from "react-icons/hi";
 import { Link } from 'react-router-dom';
 
@@ -14,6 +14,7 @@ const Header = () => {
 
     function handleMenuClose() {
         setMenu(false);
+        window.scroll(0,0)
     }
 
 
@@ -21,7 +22,7 @@ const Header = () => {
     return (
         <header>
             <div className="logo">
-                <img src={Logo} alt="logo" />
+               <Link to='/'> <img src={Logo} alt="logo" /></Link> 
             </div>
             <nav>
                 <ul className={menu ? 'open' : 'close'} >
@@ -30,8 +31,7 @@ const Header = () => {
                     <li><Link onClick={handleMenuClose} to='/about'>About</Link></li>
                     <li><Link onClick={handleMenuClose} to='/services'>Services</Link></li>
                     <li><Link onClick={handleMenuClose} to='/gallery'>Gallery</Link></li>
-                    <li><Link onClick={handleMenuClose} to='/fleet'>Fleet Description</Link></li>
-                    <li><Link onClick={handleMenuClose} to='/office'>Offices</Link></li>
+                    {/* <li><Link onClick={handleMenuClose} to='/office'>Offices</Link></li> */}
                     <li><Link onClick={handleMenuClose} to='/contact'>Contact Us</Link></li>
                 </ul>
             </nav>

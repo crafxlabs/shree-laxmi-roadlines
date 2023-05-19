@@ -6,6 +6,13 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 /* ============================================ PRELOADER ================================================= */
 
 .preloader {
@@ -35,11 +42,12 @@ header {
   width: 100%;
   overflow: hidden;
   padding: 15px 35px;
-  height: 12vh;
+  height: 14vh;
 }
 
 header .logo {
-  width: 180px;
+  width: 120px;
+  margin-top: 10px;
 }
 
 header .logo img {
@@ -100,15 +108,81 @@ header nav ul li a:hover,
 
 /* ============================================ PRELOADER ================================================= */
 
-/* ============================================ PRELOADER ================================================= */
+/* ============================================ GALLERY ================================================= */
 
+.gcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 1%;
+}
+.gcon img {
+  width: 350px;
+  height: 250px;
+  border-radius: 0.3rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.gcon img:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+.gcon .lg-react-element {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gcon h2 {
+  color: #f28025;
+  font-size: 2.2rem;
+  margin: 2rem 0 1rem 1rem;
+  align-self: flex-start;
+}
 /* ============================================ BANNER ================================================= */
 
 .banner {
   width: 100%;
   height: 40vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(./images/highway.jpg);
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./images/port.jpg); */
+  background-size: cover;
+  background-repeat: no-repeat !important;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.cbanner {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./images/re5.png);
+  background-position: center !important;
+}
+
+.gbanner {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(./images/re4.png);
+  background-position: center !important;
+}
+
+.sbanner {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(./images/re2.png);
+  background-position: bottom !important;
+}
+
+.abanner {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(./images/re1.png);
+  background-position: center !important;
+}
+
+.banner {
+  width: 100%;
+  height: 40vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -119,7 +193,7 @@ header nav ul li a:hover,
 }
 
 .banner h2 {
-  color: #ffffff;
+  color: #ffffff !important;
   font-size: 2.5rem;
   letter-spacing: 1px;
 }
@@ -137,17 +211,12 @@ header nav ul li a:hover,
   text-decoration: none;
 }
 
-.gbanner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(./images/trucks.jpg) !important;
-}
-
 /* ============================================ CONTACT ================================================= */
 
 .contact .ccon {
   display: flex;
   justify-content: center;
-  padding: 4% 10%;
+  padding: 8% 10%;
   gap: 50px;
 }
 
@@ -275,6 +344,69 @@ header nav ul li a:hover,
   background-color: #343434;
   transition: all 0.3s ease-in-out;
 }
+/* ============================================ OFFICE ================================================= */
+
+.ocon {
+  padding: 6% 8%;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ocon table {
+  background-color: #ffffff;
+  background-image: url(./images/map.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 4%;
+  border-radius: 0.3rem;
+  border-spacing: 0px;
+}
+
+.ocon table h2 {
+  font-size: 2.2rem;
+  width: max-content;
+  color: #343434;
+  margin-bottom: 2rem;
+}
+.ocon table h2 span {
+  color: #f28025;
+}
+
+.ocon table td,
+.ocon table th {
+  color: #343434;
+  padding: 1rem 3rem 1rem 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.ocon table td {
+  border-top: 1.5px solid #f28025;
+  padding: 1rem 0.5rem 2rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.ocon table tr:hover {
+  background-color: #343434;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.ocon table tr:hover td,
+.ocon table tr:hover td a,
+.ocon table tr:hover th {
+  color: #ffffff;
+}
+
+.ocon table td > a {
+  text-decoration: none;
+  color: #343434;
+}
 /* ============================================ FOOTER ================================================= */
 
 footer {
@@ -282,7 +414,7 @@ footer {
   justify-content: space-around;
   align-items: flex-start;
   padding: 2% 4%;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
 }
 
 footer .flogo {
@@ -310,6 +442,25 @@ footer h2 {
 .fcontact h2 {
   margin-bottom: 1rem;
 }
+
+.fcontact p {
+  font-size: 1rem;
+}
+
+.fcontact div a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #343434;
+  font-weight: 500;
+}
+
+.fcontact .plink {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+}
+
 .fcontact div {
   display: flex;
   justify-content: flex-start;
@@ -326,9 +477,477 @@ footer h2 {
   font-size: 24px;
 }
 
+/* ============================================ ABOUT ================================================= */
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+.about .abcon {
+  padding: 4% 8% 0% 8%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.about .abcon:last-of-type {
+  padding-bottom: 4%;
+}
+
+.about .abcon img {
+  width: 300;
+  height: 400px;
+  box-shadow: 12px 12px 0 #f28025;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0.1rem;
+  flex: 5;
+  cursor: pointer;
+}
+
+.about > h2 {
+  font-size: 2.2rem;
+  color: #f28025;
+  margin-top: 2rem;
+}
+.about .abcon img:hover {
+  box-shadow: -12px -12px 0 #f28025;
+  transition: all 0.3s ease-in-out;
+}
+
+.about .abcon .abinfo {
+  padding-top: 2rem;
+  flex: 7;
+}
+.about .abcon p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #343434;
+}
+/* ============================================ HOME ================================================= */
+
+.main {
+  background-image: linear-gradient(
+      rgba(32, 32, 32, 0.75),
+      rgba(32, 32, 32, 0.75)
+    ),
+    url(./images/h1.png);
+  height: 88vh;
+  width: 100%;
+  background-position: bottom;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+}
+
+.home .minfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+  padding: 4rem 2rem;
+}
+
+.main h1 {
+  font-size: 5rem;
+  color: #f4f4f4;
+  font-weight: 700;
+  line-height: 65px;
+}
+
+.main h4 {
+  font-size: 1.2rem;
+  color: #f28025;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.main a,
+.habout a {
+  background-color: #f28025;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+.main a:hover,
+.habout a:hover {
+  background-color: #343434;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.habout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8% 10%;
+  background-color: #f4f4f4;
+}
+
+.clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 6% 8%;
+}
+.clients .logos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  gap: 75px;
+}
+.clients .logos img {
+  width: 120px;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.clients .logos img:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.livemap,
+.ficon {
+  padding: 4% 6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ficon {
+  padding: 6% 8%;
+  background-color: #f4f4f4;
+}
+
+.ficon p {
+  color: #343434;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 25px;
+}
+.habout h2,
+.clients h2,
+.livemap h2,
+.service h2 {
+  font-size: 2.2rem;
+  color: #f28025;
+  margin-bottom: 1.5rem;
+}
+
+.habout p {
+  color: #343434;
+  text-align: left;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.afcon {
+  background-color: #343434;
+  display: flex;
+  padding: 8% 6%;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.afcon h3 {
+  color: #f28025;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+
+.afcon li {
+  list-style-type: none;
+  color: #ffffff;
+  margin-bottom: 10px;
+  position: relative;
+  padding-bottom: 3px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.afcon li:after {
+  content: "";
+  width: 30px;
+  height: 1.5px;
+  position: absolute;
+  background-color: #f28025;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.afcon li:hover:after {
+  width: 100%;
+  height: 1.5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.copyright{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #343434;
+  color: #ffffff;
+  padding: 15px 25px;
+  gap: 5px;
+}
+
+
+.copyright *{
+  font-size: 0.88rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+.copyright span{
+  color: #f28025;
+}
 /* ============================================ MEDIA QUERY ================================================= */
 
+@media screen and (min-width: 991px) and (max-width: 1250px) {
+  .fcontact p {
+    font-size: 0.8rem;
+  }
+
+  footer .flogo {
+    width: 200px;
+  }
+
+  footer h2 {
+    font-size: 1.3rem;
+  }
+
+  .fcontact div a {
+    font-size: 0.8rem;
+  }
+
+  header nav ul li a,
+  .flink ul a {
+    font-size: 0.8rem;
+  }
+
+  .habout h2,
+  .clients h2,
+  .livemap h2,
+  .service > h2 {
+    font-size: 2rem;
+  }
+
+  .main h1 {
+    font-size: 4.5rem;
+    line-height: 60px;
+  }
+
+  .main h4 {
+    font-size: 1rem;
+  }
+
+  .main a,
+  .habout a {
+    padding: 0.7rem 1.3rem;
+    border-radius: 0.2rem;
+    font-size: 0.9rem;
+  }
+
+  .habout p {
+    font-size: 0.95rem;
+  }
+
+  header .logo {
+    width: 110px;
+  }
+
+  .about .abcon {
+    margin-bottom: 25px;
+  }
+  .about .abcon p {
+    font-size: 0.9rem;
+  }
+
+  .about .abcon .abinfo {
+    padding-top: 0rem;
+  }
+
+  .ficon p {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+
+  .afcon li {
+    font-size: 0.9rem;
+  }
+
+  .contact .ccon {
+    padding: 8% 4%;
+    gap: 25px;
+  }
+
+  .cinfo h2 {
+    font-size: 2rem;
+  }
+
+  .cinfo .card h3 {
+    font-size: 1rem;
+  }
+
+  .cinfo .card p {
+    font-size: 0.9rem;
+  }
+
+  .cinfo .card svg {
+    font-size: 30px;
+  }
+}
+
 @media screen and (max-width: 990px) {
+  .gcon h2,
+  .about > h2 {
+    font-size: 2rem;
+  }
+  .banner .path {
+    bottom: 15px;
+    left: 30px;
+    gap: 10px;
+  }
+
+  .banner .path a {
+    font-size: 0.9rem;
+  }
+  .main h1 {
+    font-size: 3.5rem;
+    color: #f4f4f4;
+    font-weight: 700;
+    line-height: 65px;
+    line-height: 50px;
+  }
+  .main {
+    height: 100vh;
+  }
+
+  .main a {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .home .minfo {
+    margin-top: 3rem;
+    gap: 15px;
+    padding: 4rem 2rem;
+  }
+
+  .habout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8% 4%;
+  }
+
+  .main h4 {
+    font-size: 1rem;
+  }
+
+  .service .ficon h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .about .abcon {
+    padding: 4% 4% 0% 4%;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about .abcon1 {
+    flex-direction: column-reverse;
+  }
+
+  .about .abcon img {
+    width: 300px;
+    height: 400px;
+  }
+  .about .abcon p {
+    font-size: 0.9rem;
+  }
+  .about .abcon .abinfo {
+    padding-top: 0.3rem;
+  }
+  .ficon {
+    padding: 6% 4% 8% 4%;
+  }
+
+  .ficon p {
+    color: #343434;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 25px;
+  }
+
+  .afcon {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .afcon li {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .afcon h3 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+  .banner {
+    margin-top: 12vh;
+    height: 30vh;
+  }
+
+  .contact .ccon {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4% 10%;
+  }
+
+  .cform {
+    padding: 4%;
+  }
+
+  .contact .ccon {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4%;
+  }
+
+  .contact .ccon > * {
+    width: 100%;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+  }
   .preloader img {
     width: 200px;
     margin-bottom: 100px;
@@ -345,8 +964,9 @@ footer h2 {
     justify-content: flex-start;
     padding: 100px 0 0 25px;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-    transform: translateX(500px);
+    transform: translateX(1000px);
     transition: all 0.3s ease;
+    z-index: 1111;
   }
 
   .open {
@@ -355,7 +975,7 @@ footer h2 {
   }
 
   .close {
-    transform: translateX(500px);
+    transform: translateX(1000px);
     transition: all 0.3s ease;
   }
 
@@ -365,7 +985,7 @@ footer h2 {
   }
 
   header .logo {
-    width: 150px;
+    width: 100px;
   }
 
   .menu,
@@ -375,7 +995,296 @@ footer h2 {
 
   .cross {
     position: absolute;
-    top: 16px;
+    top: 25px;
     right: 15px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  footer .fcontact,
+  footer .flink,
+  footer .flogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .flink ul {
+    align-items: center;
+  }
+
+  footer .flogo {
+    width: 200px;
+  }
+
+  .cinfo .card p {
+    font-size: 0.8rem;
+  }
+
+  .cinfo .card .scon {
+    padding: 0.6rem;
+  }
+
+  .cinfo .card svg {
+    font-size: 24px;
+    color: #f4f4f4;
+  }
+
+  .cinfo .card h3 {
+    font-size: 1rem;
+  }
+
+  .cinfo .card {
+    height: 110px;
+    padding: 1rem;
+  }
+
+  .cinfo h5 {
+    font-size: 1rem;
+  }
+
+  .cinfo h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #343434;
+    line-height: 32px;
+    margin: 0.35rem 0 1rem 0;
+  }
+
+  .cform h2 {
+    font-size: 1.5rem;
+  }
+
+  .cform form input,
+  .cform form textarea {
+    padding: 0.8rem 0.8rem 0.8rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .fcontact p {
+    font-size: 0.8rem;
+  }
+
+  .fcontact div a {
+    font-size: 0.8rem;
+  }
+
+  header nav ul li a,
+  .flink ul a {
+    font-size: 0.8rem;
+    padding-bottom: 3px;
+  }
+}
+
+@media screen and (max-width: 715px) {
+
+  .copyright *{
+    font-size: 0.85rem;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .main a,
+  .habout a {
+    font-size: 0.9rem;
+  }
+  .gcon h2,
+  .about > h2 {
+    font-size: 1.8rem;
+  }
+  .clients .logos img {
+    width: 100px;
+  }
+
+  .habout p {
+    font-size: 0.85rem;
+    width: 100%;
+  }
+  .gcon img {
+    width: 300px;
+    height: 220px;
+  }
+
+  .banner .path {
+    bottom: 15px;
+    left: 20px;
+  }
+
+  .banner .path a {
+    font-size: 0.8rem;
+  }
+
+  .service .ficon h2 {
+    font-size: 1.5rem;
+  }
+  .ficon p {
+    font-size: 0.85rem;
+    margin-top: 5px;
+  }
+  .afcon h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .afcon li {
+    font-size: 0.85rem;
+  }
+
+  .afcon {
+    gap: 15px;
+  }
+
+  footer .flogo {
+    width: 150px;
+  }
+
+  footer {
+    gap: 15px;
+  }
+
+  .about .abcon img {
+    width: 250px;
+    height: 320px;
+  }
+
+  .about .abcon p {
+    font-size: 0.85rem;
+  }
+
+  .main h1 {
+    font-size: 3.5rem;
+    line-height: 55px;
+    text-align: center;
+  }
+
+  .main h4 {
+    font-size: 0.9rem;
+  }
+
+  .habout h2,
+  .clients h2,
+  .livemap h2,
+  .service h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .copyright{
+    padding: 15px 20px;
+    gap: 3px;
+  }
+  .copyright *{
+    font-size: 0.8rem;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .banner{
+    height: 25vh;
+  }
+  .banner h2 {
+    color: #ffffff !important;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+  }
+  .gcon img {
+    width: 300px;
+    height: 220px;
+  }
+
+  .service .ficon h2 {
+    font-size: 1.3rem;
+  }
+
+  .afcon h3 {
+    font-size: 1.5rem;
+  }
+
+  .afcon li {
+    font-size: 0.8rem;
+  }
+
+  .gcon h2,
+  .about > h2 {
+    font-size: 1.5rem;
+  }
+
+  .main h1 {
+    font-size: 3rem;
+  }
+  .main h4 {
+    font-size: 0.8rem;
+  }
+  .main a {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .main a,
+  .habout a {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 364px) {
+  .copyright{
+    padding: 15px 15px;
+    gap: 3px;
+  }
+  .copyright *{
+    font-size: 0.7rem;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .service .ficon h2 {
+    font-size: 1.1rem;
+  }
+
+  .ficon p {
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+
+  .afcon h3 {
+    font-size: 1.3rem;
+  }
+
+  footer .flogo {
+    width: 140px;
+  }
+
+  .cinfo h2 {
+    font-size: 1.5rem;
+    line-height: 28px;
+  }
+
+  .about .abcon p {
+    font-size: 0.8rem;
+  }
+
+  .clients .logos img {
+    width: 75px;
+  }
+
+  .habout h2,
+  .clients h2,
+  .livemap h2,
+  .service h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .main h1 {
+    font-size: 2.7rem;
+    line-height: 45px;
+  }
+
+  .home .minfo {
+    gap: 10px;
+    padding: 4rem 1rem;
   }
 }

@@ -7,10 +7,10 @@ import Home from "./Home.jsx"
 import About from "./About.jsx"
 import Services from "./Services.jsx"
 import Gallery from "./Gallery.jsx"
-import Fleet from "./Fleet.jsx"
 import Office from "./Office.jsx"
 import Contact from "./Contact.jsx"
 import Footer from './Footer';
+import Copyright from './Copyright';
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
 
   setTimeout(() => {
     setLoading(false)
-  }, 1000)
+  }, 5000)
 
   if (loading) {
     return <Preloader />
@@ -35,12 +35,12 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/gallery" element={<Gallery />} />
-        <Route path="/fleet" element={<Fleet />} />
-        <Route path="/office" element={<Office />} />
+        {/* <Route path="/office" element={<Office />} /> */}
         <Route path="/contact" element={<Contact />} />
       </Routes>
 
-      <Footer/>
+      <Footer />
+      <Copyright />
 
 
 

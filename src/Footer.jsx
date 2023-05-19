@@ -17,21 +17,17 @@ const Footer = () => {
           <Link to='/about'>About</Link>
           <Link to='/services'>Services</Link>
           <Link to='/gallery'>Gallery</Link>
-          <Link to='/fleet'>Fleet Description</Link>
-          <Link to='/office'>Offices</Link>
           <Link to='/contact'>Contact Us</Link>
         </ul>
       </div>
       <div className="flink">
         <h2>Our Services</h2>
         <ul>
-          <Link to='/'>Home</Link>
-          <Link to='/about'>About</Link>
-          <Link to='/services'>Services</Link>
-          <Link to='/gallery'>Gallery</Link>
-          <Link to='/fleet'>Fleet Description</Link>
-          <Link to='/office'>Offices</Link>
-          <Link to='/contact'>Contact Us</Link>
+          <Link to='/services'>Oil Transportation</Link>
+          <Link to='/services'>Petrol Transportation</Link>
+          <Link to='/services'>Drugs Transportation</Link>
+          <Link to='/services'>Chemicals Transportation</Link>
+          <Link to='/services'>Fuel Transportation</Link>
         </ul>
       </div>
       <div className="fcontact">
@@ -40,18 +36,19 @@ const Footer = () => {
         <div>
           <GoLocation />
           <p>
-            301, Commercial Manor, 4th Cross <br />
-            Clive Road, Masjid Bunder (E), <br />
-            Mumbai - 400009
+            Jay Prakash Nagar Housing Society,<br />
+            7th Road, Rajawadi, Vidyavihar (E), <br />
+            Mumbai - 400077
           </p>
         </div>
         <div><IoCallOutline />
-          <div>
-            <a href="#">+022 61775555</a>
-            <a href="#">+022 61775555</a>
+          <div className='plink'>
+            <a href="tel:9324045272">+91 9324045272</a>
+            <a href="tel:8419941998">+91 8419941998</a>
           </div></div>
         <div><GoMail />
-        <a href="#">info@darshanroadlines.com</a></div>
+          <a href="mailto:shreelaxmiroadlines@yahoo.in">shreelaxmiroadlines@yahoo.in</a>
+        </div>
       </div>
     </footer>
   )
