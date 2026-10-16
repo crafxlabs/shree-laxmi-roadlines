@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { BiCaretRight } from "react-icons/bi";
-import Indiamap from "./images/map.jpg"
+// import Indiamap from "./images/map.jpg"
 
 const Office = () => {
   return (

@@ -7,7 +7,7 @@ import Home from "./Home.jsx"
 import About from "./About.jsx"
 import Services from "./Services.jsx"
 import Gallery from "./Gallery.jsx"
-import Office from "./Office.jsx"
+// import Office from "./Office.jsx"
 import Contact from "./Contact.jsx"
 import Footer from './Footer';
 import Copyright from './Copyright';
